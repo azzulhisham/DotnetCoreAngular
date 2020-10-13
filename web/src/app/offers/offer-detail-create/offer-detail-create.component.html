@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h3>New Offer</h3>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div *ngIf="offer!=null">
+    <div class="container">
+        <form class="form" (ngSubmit)="CreateOffer()">  
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="shipmentNumber">Shipment Number</label><span style="color:red"> *</span>
+                        <input type="text" class="form-control" id="shipmentNumber" name="shipmentNumber" [(ngModel)]="offer.shipmentNumber" required />
+                    </div>  
+                </div>   
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="pickupDateTime">Pickup DateTime</label><span style="color:red"> *</span>
+                        <input type="number" class="form-control" id="pickupDateTime" name="pickupDateTime" [(ngModel)]="offer.pickupDateTime" />
+                    </div>  
+                </div>                   
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="price">Price</label><span style="color:red"> *</span>
+                        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="offer.price" />
+                    </div>  
+                </div>   
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="deliveryLocationName">Delivery Location Name</label><span style="color:red"> *</span>
+                        <input type="text" class="form-control" id="deliveryLocationName" name="deliveryLocationName" [(ngModel)]="offer.deliveryLocationName" />
+                    </div>  
+                </div>                   
+            </div>    
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="currency">Currency</label><span style="color:red"> *</span>
+                        <input type="text" class="form-control" id="currency" name="currency" [(ngModel)]="offer.currency" />
+                    </div>  
+                </div>   
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="deliveryDateTime">Delivery DateTime</label><span style="color:red"> *</span>
+                        <input type="number" class="form-control" id="deliveryDateTime" name="deliveryDateTime" [(ngModel)]="offer.deliveryDateTime" />
+                    </div>  
+                </div>                   
+            </div>    
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="vehicleSize">Vehicle Size</label><span style="color:red"> *</span>
+                        <input type="text" class="form-control" id="vehicleSize" name="vehicleSize" [(ngModel)]="offer.vehicleSize" />
+                    </div>  
+                </div>   
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="loadDetail1">Load Detail 1</label>
+                        <input type="text" class="form-control" id="loadDetail1" name="loadDetail1" [(ngModel)]="offer.loadDetail1" />
+                    </div>  
+                </div>                   
+            </div>  
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="vehicleBuildUp">Vehicle Build-Up</label><span style="color:red"> *</span>
+                        <input type="text" class="form-control" id="vehicleBuildUp" name="vehicleBuildUp" [(ngModel)]="offer.vehicleBuildUp" />
+                    </div>  
+                </div>   
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="loadDetail2">Load Detail 2</label>
+                        <input type="text" class="form-control" id="loadDetail2" name="loadDetail2" [(ngModel)]="offer.loadDetail2" />
+                    </div>  
+                </div>                   
+            </div>  
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="pickupLocationName">Pickup Location Name</label><span style="color:red"> *</span>
+                        <input type="text" class="form-control" id="pickupLocationName" name="pickupLocationName" [(ngModel)]="offer.pickupLocationName" />
+                    </div>  
+                </div>   
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="loadDetail3">Load Detail 3</label>
+                        <input type="text" class="form-control" id="loadDetail3" name="loadDetail3" [(ngModel)]="offer.loadDetail3" />
+                    </div>  
+                </div>                   
+            </div>              
+            <div class="row">
+                <div class="col-md"  style="text-align: end;" >
+                    <button type="submit" class="btn btn-primary">Submit</button>   
+                </div> 
+            </div>
+        </form> 
+    </div>
+</div>
